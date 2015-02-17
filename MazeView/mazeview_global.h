@@ -1,0 +1,12 @@
+#ifndef MAZEVIEW_GLOBAL_H
+#define MAZEVIEW_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MAZEVIEW_LIBRARY)
+#  define MAZEVIEWSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MAZEVIEWSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MAZEVIEW_GLOBAL_H

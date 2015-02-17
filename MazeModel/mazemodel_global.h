@@ -1,0 +1,12 @@
+#ifndef MAZEMODEL_GLOBAL_H
+#define MAZEMODEL_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(MAZEMODEL_LIBRARY)
+#  define MAZEMODELSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define MAZEMODELSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MAZEMODEL_GLOBAL_H
