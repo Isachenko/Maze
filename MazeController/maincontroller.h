@@ -2,6 +2,7 @@
 #define MAINCONTROLLER_H
 
 #include <QObject>
+#include "mainwindow.h"
 
 class MainController : public QObject
 {
@@ -9,6 +10,10 @@ class MainController : public QObject
 public:
     explicit MainController(QObject *parent = 0);
     ~MainController();
+    MainWindow *_view;
+
+public:
+    void initView(MainWindow *view);
 
 signals:
 

@@ -10,3 +10,10 @@ MainController::~MainController()
 
 }
 
+void MainController::initView(MainWindow *view) :
+    _view(view)
+{
+
+
+}
+

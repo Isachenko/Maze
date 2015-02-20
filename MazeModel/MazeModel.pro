@@ -11,12 +11,38 @@ TEMPLATE = lib
 
 DEFINES += MAZEMODEL_LIBRARY
 
-SOURCES += mazemodel.cpp
+SOURCES += \
+    Field/field.cpp \
+    Field/hedge.cpp \
+    Field/fieldfilemanager.cpp \
+    Field/fieldfileexpert.cpp \
+    robot.cpp
 
-HEADERS += mazemodel.h\
-        mazemodel_global.h
+HEADERS +=\
+        mazemodel_global.h \
+    Field/field.h \
+    Field/hedge.h \
+    Field/fieldfilemanager.h \
+    Field/fieldfileexpert.h \
+    robot.h
 
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+CONFIG(debug, debug|release): {
+OUTPUT_DIR = "$$PWD/../../buildMaze/debug"
+} else: {
+OUTPUT_DIR = "$$PWD/../../buildMaze/release"
+}
+
+UI_DIR = "$$OUTPUT_DIR/ui/"
+MOC_DIR = "$$OUTPUT_DIR/moc/"
+RCC_DIR = "$$OUTPUT_DIR/res/"
+DESTDIR = "$$OUTPUT_DIR/bin/"
+OBJECTS_DIR = "$$OUTPUT_DIR/obj/"
+
+#common
+INCLUDEPATH += "../MazeCommon/"
+LIBS += -L"$$OUTPUT_DIR/bin/" -lMazeCommon
