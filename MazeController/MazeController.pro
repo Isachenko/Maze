@@ -11,12 +11,14 @@ TEMPLATE = lib
 
 DEFINES += MAZECONTROLLER_LIBRARY
 
-SOURCES += mazecontroller.cpp \
-    maincontroller.cpp
+SOURCES += \
+    maincontroller.cpp \
+    fieldcontroller.cpp
 
-HEADERS += mazecontroller.h\
+HEADERS +=\
         mazecontroller_global.h \
-    maincontroller.h
+    maincontroller.h \
+    fieldcontroller.h
 
 unix {
     target.path = /usr/lib
@@ -44,3 +46,5 @@ LIBS += -L"$$OUTPUT_DIR/bin/" -lMazeView
 #common
 INCLUDEPATH += "../MazeCommon/"
 LIBS += -L"$$OUTPUT_DIR/bin/" -lMazeCommon
+
+QMAKE_CXXFLAGS += -std=c++11

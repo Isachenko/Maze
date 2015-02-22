@@ -40,3 +40,5 @@ MOC_DIR = "$$OUTPUT_DIR/moc/"
 RCC_DIR = "$$OUTPUT_DIR/res/"
 DESTDIR = "$$OUTPUT_DIR/bin/"
 OBJECTS_DIR = "$$OUTPUT_DIR/obj/"
+
+QMAKE_CXXFLAGS += -std=c++11

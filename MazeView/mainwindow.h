@@ -1,7 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
+#include <QString>
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +18,14 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+public:
+
+public slots:
+    void handleOpenAction();
+
+signals:
+    void openFileTrigered(QString fileName);
 };
 
 #endif // MAINWINDOW_H

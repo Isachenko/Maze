@@ -5,21 +5,26 @@
 #include <QPointF>
 
 #include "hedge.h"
-#include "robot.h"
+#include "Robot/robot.h"
 
 class Field
 {
 private:
     QList<Hedge> _hedges;
     Robot _robot;
-    QPointF _robotPosition;
+    QPoint _robotPosition;
 
-    qreal _height;
-    qreal _width;
+    int _height = 0;
+    int _width = 0;
 
 public:
     Field();
+    Field(int height, int width);
     ~Field();
+
+public:
+    void appendHedge(Hedge &&hedge);
+    void setRobot(QPoint &&pos, Robot &&robot);
 };
 
 #endif // FIELD_H

@@ -45,3 +45,5 @@ LIBS += -L"$$OUTPUT_DIR/bin/" -lMazeController
 #common
 INCLUDEPATH += "../MazeCommon/"
 LIBS += -L"$$OUTPUT_DIR/bin/" -lMazeCommon
+
+QMAKE_CXXFLAGS += -std=c++11

@@ -2,15 +2,15 @@
 #define ROBOT_H
 
 #include <Qt>
-#include <QPointF>
 
 class Robot
 {
 private:
-    qreal size;
-    quint32 sensorsCount;
+    int _size = 0;
+    int _sensorsCount = 4;
 
 public:
+    Robot(int size);
     Robot();
     ~Robot();
 

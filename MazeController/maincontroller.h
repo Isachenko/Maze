@@ -10,7 +10,7 @@ class MainController : public QObject
 public:
     explicit MainController(QObject *parent = 0);
     ~MainController();
-    MainWindow *_view;
+    MainWindow *_viewMain;
 
 public:
     void initView(MainWindow *view);

@@ -15,16 +15,14 @@ SOURCES += \
     Field/field.cpp \
     Field/hedge.cpp \
     Field/fieldfilemanager.cpp \
-    Field/fieldfileexpert.cpp \
-    robot.cpp
+    Robot/robot.cpp
 
 HEADERS +=\
         mazemodel_global.h \
     Field/field.h \
     Field/hedge.h \
     Field/fieldfilemanager.h \
-    Field/fieldfileexpert.h \
-    robot.h
+    Robot/robot.h
 
 unix {
     target.path = /usr/lib
@@ -46,3 +44,5 @@ OBJECTS_DIR = "$$OUTPUT_DIR/obj/"
 #common
 INCLUDEPATH += "../MazeCommon/"
 LIBS += -L"$$OUTPUT_DIR/bin/" -lMazeCommon
+
+QMAKE_CXXFLAGS += -std=c++11
