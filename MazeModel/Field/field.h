@@ -14,8 +14,8 @@ private:
     Robot _robot;
     QPoint _robotPosition;
 
-    int _height = 0;
     int _width = 0;
+    int _height = 0;
 
 public:
     Field();
@@ -25,6 +25,14 @@ public:
 public:
     void appendHedge(Hedge &&hedge);
     void setRobot(QPoint &&pos, Robot &&robot);
+
+    const QList<Hedge> &getHedges() const ;
+    const Robot &getRobot() const ;
+    QPoint getRobotPosition() const ;
+    int width() const;
+    void setWidth(int width);
+    int height() const;
+    void setHeight(int height);
 };
 
 #endif // FIELD_H

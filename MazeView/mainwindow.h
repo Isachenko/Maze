@@ -4,6 +4,9 @@
 #include <QtWidgets/QMainWindow>
 #include <QString>
 
+#include "fieldview.h"
+#include "mazecommon.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -18,14 +21,16 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Ptr(FieldView) _viewField;
 
 public:
+    void setFieldView(Ptr(FieldView) fieldView);
 
 public slots:
     void handleOpenAction();
 
 signals:
-    void openFileTrigered(QString fileName);
+    void openFileTrigered(const QString &fileName);
 };
 
 #endif // MAINWINDOW_H

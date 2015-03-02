@@ -13,12 +13,14 @@ DEFINES += MAZEVIEW_LIBRARY
 
 SOURCES += \
     mainwindow.cpp \
-    mazewidget.cpp
+    mazewidget.cpp \
+    fieldview.cpp
 
 HEADERS +=\
         mazeview_global.h \
     mainwindow.h \
-    mazewidget.h
+    mazewidget.h \
+    fieldview.h
 
 unix {
     target.path = /usr/lib
@@ -34,6 +36,10 @@ OUTPUT_DIR = "$$PWD/../../buildMaze/debug"
 } else: {
 OUTPUT_DIR = "$$PWD/../../buildMaze/release"
 }
+
+#common
+INCLUDEPATH += "../MazeCommon/"
+LIBS += -L"$$OUTPUT_DIR/bin/" -lMazeCommon
 
 UI_DIR = "$$OUTPUT_DIR/ui/"
 MOC_DIR = "$$OUTPUT_DIR/moc/"

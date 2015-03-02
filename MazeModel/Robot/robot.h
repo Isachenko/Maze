@@ -14,6 +14,10 @@ public:
     Robot();
     ~Robot();
 
+    int size() const;
+    void setSize(int size);
+    int sensorsCount() const;
+    void setSensorsCount(int sensorsCount);
 };
 
 #endif // ROBOT_H

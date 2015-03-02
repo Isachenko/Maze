@@ -15,14 +15,16 @@ SOURCES += \
     Field/field.cpp \
     Field/hedge.cpp \
     Field/fieldfilemanager.cpp \
-    Robot/robot.cpp
+    Robot/robot.cpp \
+    mainmodel.cpp
 
 HEADERS +=\
         mazemodel_global.h \
     Field/field.h \
     Field/hedge.h \
     Field/fieldfilemanager.h \
-    Robot/robot.h
+    Robot/robot.h \
+    mainmodel.h
 
 unix {
     target.path = /usr/lib

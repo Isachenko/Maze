@@ -2,22 +2,35 @@
 #define MAINCONTROLLER_H
 
 #include <QObject>
+#include <QSharedPointer>
 #include "mainwindow.h"
+#include "mainmodel.h"
+#include "mazecommon.h"
+#include "fieldcontroller.h"
 
 class MainController : public QObject
 {
     Q_OBJECT
 public:
-    explicit MainController(QObject *parent = 0);
+    explicit MainController(const Ptr(MainModel) &model, QObject *parent = 0);
     ~MainController();
-    MainWindow *_viewMain;
+
+private:
+    Ptr(MainWindow) _viewMain;
+    Ptr(MainModel) _modelMain;
+    Ptr(FieldController) _fieldController;
+    Ptr(FieldView) _viewField;
 
 public:
-    void initView(MainWindow *view);
+    virtual void initView(const Ptr(MainWindow) &view, const Ptr(FieldView) &viewField);
+    virtual void setFieldController(const Ptr(FieldController) fieldController);
 
 signals:
 
 public slots:
+
+private slots:
+    void handleOpenMaze(const QString &fileName);
 };
 
 #endif // MAINCONTROLLER_H

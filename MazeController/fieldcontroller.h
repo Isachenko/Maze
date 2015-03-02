@@ -3,24 +3,33 @@
 
 #include <QObject>
 #include <QtWidgets/QWidget>
+
+#include "mazecommon.h"
 #include "Field/field.h"
-#include <QPointer>
+#include "fieldview.h"
 
 class FieldController : public QObject
 {
     Q_OBJECT
 public:
-    explicit FieldController(QPointer<Field> &&modelFiled, QObject *parent = 0);
+    explicit FieldController(QObject *parent = 0);
     ~FieldController();
 
 private:
-    QPointer<Field> _modelField;
+    Field _modelField;
+    Ptr(FieldView) _viewField;
+
+public:
+    void openModel(const QString &fileName);
+
+    virtual void initView(Ptr(FieldView) fieldView);
 
 
 
 signals:
 
 public slots:
+    void updateView();
 };
 
 #endif // FIELDCONTROLLER_H

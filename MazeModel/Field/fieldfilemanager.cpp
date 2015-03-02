@@ -20,8 +20,8 @@ Field FieldFileManager::loadField(const QString &fileName)
 {
     //field size
     QRegExp regExpSize("(\\d+)x(\\d+)");
-    QRegExp regExpRectangle("Rectangle: (\\d+), (\\d+), (\\d+), (\\d+)", Qt::CaseInsensitive);
-    QRegExp regExpRobot("Robot: (\\d+), (\\d+), (\\d+)", Qt::CaseInsensitive);
+    QRegExp regExpRectangle("Rectangle: (\\d+) (\\d+), (\\d+) (\\d+)", Qt::CaseInsensitive);
+    QRegExp regExpRobot("Robot: (\\d+) (\\d+), (\\d+)", Qt::CaseInsensitive);
 
 
     int width = 0;
@@ -30,13 +30,13 @@ Field FieldFileManager::loadField(const QString &fileName)
         width = regExpSize.cap(1).toInt();
         height = regExpSize.cap(2).toInt();
     } else {
-        return Field(0, 0);
+        return std::move(Field(0, 0));
     }
     Field field(width, height);
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        return field;
+        return std::move(field);
     }
 
     //objects on field
@@ -50,23 +50,25 @@ Field FieldFileManager::loadField(const QString &fileName)
             int bry = regExpRectangle.cap(4).toInt();
             field.appendHedge(Hedge(QRect(QPoint(tlx, tly), QPoint(brx, bry))));
         } else if(regExpRobot.indexIn(line) != -1) {
-            int x = regExpRectangle.cap(1).toInt();
-            int y = regExpRectangle.cap(2).toInt();
-            int size = regExpRectangle.cap(3).toInt();
+            int x = regExpRobot.cap(1).toInt();
+            int y = regExpRobot.cap(2).toInt();
+            int size = regExpRobot.cap(3).toInt();
             field.setRobot(QPoint(x,y), Robot(size));
         }
     }
 
-    return field;
+    return std::move(field);
 }
 
-Field FieldFileManager::saveField(const QString &fileName)
+bool FieldFileManager::saveField(const QString &fileName)
 {
 
+    return false;
 }
 
-Field FieldFileManager::generate(QPointF size)
+Field&& FieldFileManager::generate(QPointF size)
 {
 
+    return std::move(Field(0, 0));
 }
 

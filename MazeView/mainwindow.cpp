@@ -11,14 +11,23 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(this->ui->actionOpen, SIGNAL(triggered()), SLOT(handleOpenAction()));
 }
 
+
+void MainWindow::setFieldView(Ptr(FieldView) fieldView)
+{
+    _viewField = fieldView;
+    this->ui->fieldlLayout->addWidget(_viewField.data());
+
+}
+
 MainWindow::~MainWindow()
 {
+    _viewField->setParent(nullptr);
     delete ui;
 }
 
 void MainWindow::handleOpenAction()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
-         tr("Open Image"), "~/", tr("Image Files (*.maze)"));
+         tr("Open Maze"), "~/", tr("Maze Files (*.maze)"));
     emit openFileTrigered(fileName);
 }

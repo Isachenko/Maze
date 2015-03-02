@@ -13,8 +13,8 @@ public:
     ~FieldFileManager();
 
     static Field loadField(const QString &fileName);
-    static Field saveField(const QString &fileName);
-    static Field generate(QPointF size);
+    static bool saveField(const QString &fileName);
+    static Field &&generate(QPointF size);
 
 };
 
