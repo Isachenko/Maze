@@ -6,6 +6,8 @@
 
 #define Ptr(x) QSharedPointer<x>
 
+#define LINE_THICKNESS 3
+
 class MAZECOMMONSHARED_EXPORT MazeCommon
 {
 

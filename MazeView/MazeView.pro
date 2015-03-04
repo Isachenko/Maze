@@ -14,13 +14,17 @@ DEFINES += MAZEVIEW_LIBRARY
 SOURCES += \
     mainwindow.cpp \
     mazewidget.cpp \
-    fieldview.cpp
+    fieldview.cpp \
+    moovewidget.cpp \
+    directionwidget.cpp
 
 HEADERS +=\
         mazeview_global.h \
     mainwindow.h \
     mazewidget.h \
-    fieldview.h
+    fieldview.h \
+    moovewidget.h \
+    directionwidget.h
 
 unix {
     target.path = /usr/lib
@@ -29,7 +33,9 @@ unix {
 
 FORMS += \
     mainwindow.ui \
-    mazewidget.ui
+    mazewidget.ui \
+    moovewidget.ui \
+    directionwidget.ui
 
 CONFIG(debug, debug|release): {
 OUTPUT_DIR = "$$PWD/../../buildMaze/debug"

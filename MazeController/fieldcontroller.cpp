@@ -1,5 +1,7 @@
 #include "fieldcontroller.h"
 #include "Field/fieldfilemanager.h"
+#include <QtMath>
+#include <cmath>
 
 FieldController::FieldController(QObject *parent)
 {
@@ -24,6 +26,7 @@ void FieldController::updateView()
         _viewField->setRobotPosition(_modelField.getRobotPosition());
         _viewField->setRobotSize(_modelField.getRobot().size());
         _viewField->setSize(_modelField.width(), _modelField.height());
+        _viewField->setRobotDirection(M_PI);
 
         _viewField->update();
     }

@@ -2,6 +2,7 @@
 #define FIELDVIEW_H
 
 #include <QtWidgets/QWidget>
+#include "mazecommon.h"
 
 namespace Ui {
 class FieldView;
@@ -16,8 +17,9 @@ public:
     ~FieldView();
 private:
     QPoint _robotPosition = QPoint(0, 0);
-    qreal _robotSizeX = 0;
-    qreal _robotSizeY = 0;
+    qreal _robotSize = 0;
+    //from 0 to 360
+    qreal _robotDirection = 0;
     QList<QRect> _hedges;
 
     int _sizeX = 100;
@@ -34,6 +36,9 @@ public:
 
     void setSize(int sizeX, int sizeY);
     QPoint getScaled(const QPoint &point);
+
+    qreal robotDirection() const;
+    void setRobotDirection(const qreal &robotDirection);
 
 protected:
     void paintEvent(QPaintEvent *event);

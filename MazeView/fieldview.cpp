@@ -1,5 +1,6 @@
 #include "fieldview.h"
 #include "ui_fieldview.h"
+#include "qmath.h"
 
 FieldView::FieldView(QWidget *parent) :
     QWidget(parent)
@@ -9,6 +10,16 @@ FieldView::FieldView(QWidget *parent) :
 FieldView::~FieldView()
 {
 }
+qreal FieldView::robotDirection() const
+{
+    return _robotDirection;
+}
+
+void FieldView::setRobotDirection(const qreal &robotDirection)
+{
+    _robotDirection = robotDirection;
+}
+
 
 void FieldView::    setSize(int sizeX, int sizeY)
 {
@@ -43,8 +54,7 @@ void FieldView::setHedges(const QList<QRect> &hedges)
 
 void FieldView::setRobotSize(const qreal &robotSize)
 {
-    _robotSizeX = robotSize;
-    _robotSizeY = robotSize;
+    _robotSize = robotSize;
 }
 
 void FieldView::setRobotPosition(const QPoint &robotPosition)
@@ -57,12 +67,14 @@ void FieldView::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
 
+    //border
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setPen(Qt::darkCyan);
+    painter.setPen(QPen(Qt::darkCyan, LINE_THICKNESS));
     painter.drawRect(QRect(0, 0, this->width(), this->height()));
 
     //robot
-    painter.setRenderHint(QPainter::Antialiasing);
-    painter.setPen(Qt::darkGreen);
-    painter.drawEllipse((getScaled(_robotPosition)), getScaled(_robotSizeX, true),getScaled(_robotSizeY, false));
+    painter.setPen(QPen(Qt::darkGreen, LINE_THICKNESS));
+    QPoint robotCenter = getScaled(_robotPosition);
+    painter.drawEllipse(robotCenter, getScaled(_robotSize, true),getScaled(_robotSize, false));
+    painter.drawLine(robotCenter, robotCenter + getScaled(QPoint(_robotSize * qCos(_robotDirection), _robotSize * qSin(_robotDirection))));
 }

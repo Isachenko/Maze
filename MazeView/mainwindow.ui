@@ -14,12 +14,19 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="5,3">
     <item>
      <layout class="QVBoxLayout" name="fieldlLayout"/>
     </item>
     <item>
-     <layout class="QVBoxLayout" name="verticalLayout_2"/>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="infoLayout"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="moveLayout"/>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>

@@ -16,7 +16,12 @@ void MainWindow::setFieldView(Ptr(FieldView) fieldView)
 {
     _viewField = fieldView;
     this->ui->fieldlLayout->addWidget(_viewField.data());
+}
 
+void MainWindow::setMoveView(Ptr(MooveWidget) moveView)
+{
+    _moveWidget = moveView;
+    this->ui->moveLayout->addWidget(_moveWidget.data());
 }
 
 MainWindow::~MainWindow()

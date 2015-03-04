@@ -37,5 +37,9 @@ void MainController::initView(const Ptr(MainWindow) &view, const Ptr(FieldView) 
     _viewMain->setFieldView(_viewField);
     bool connected = connect(_viewMain.data(), SIGNAL(openFileTrigered(QString)), SLOT(handleOpenMaze(QString)));
 
+    //move View
+    _moveWidget = Ptr(MooveWidget)(new MooveWidget());
+    _viewMain->setMoveView(_moveWidget);
+
 }
 

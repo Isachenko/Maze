@@ -7,6 +7,7 @@
 #include "mainmodel.h"
 #include "mazecommon.h"
 #include "fieldcontroller.h"
+#include "moovewidget.h"
 
 class MainController : public QObject
 {
@@ -20,6 +21,7 @@ private:
     Ptr(MainModel) _modelMain;
     Ptr(FieldController) _fieldController;
     Ptr(FieldView) _viewField;
+    Ptr(MooveWidget) _moveWidget;
 
 public:
     virtual void initView(const Ptr(MainWindow) &view, const Ptr(FieldView) &viewField);
