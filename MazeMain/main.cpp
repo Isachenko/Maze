@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
     Ptr(MainWindow) windowMain(new MainWindow());
     Ptr(MainModel) modelMain(new MainModel());
     MainController controllerMain(modelMain);
-    controllerMain.initView(windowMain, viewField);
     controllerMain.setFieldController(controllerField);
+    controllerMain.initView(windowMain, viewField);
 
     windowMain->show();
 
