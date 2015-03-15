@@ -13,19 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,0">
+  <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,0">
    <item>
-    <layout class="QHBoxLayout" name="directionLayout"/>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="moveLayout">
-     <item>
-      <widget class="QPushButton" name="goBackButton">
-       <property name="text">
-        <string>go back</string>
-       </property>
-      </widget>
-     </item>
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QPushButton" name="goForwardButton">
        <property name="text">
@@ -33,7 +23,17 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QPushButton" name="goBackButton">
+       <property name="text">
+        <string>go back</string>
+       </property>
+      </widget>
+     </item>
     </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="directionLayout"/>
    </item>
   </layout>
  </widget>

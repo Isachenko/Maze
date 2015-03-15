@@ -21,6 +21,9 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
+       <layout class="QHBoxLayout" name="playerPanelLayout"/>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="infoLayout"/>
       </item>
       <item>

@@ -24,6 +24,14 @@ void MainWindow::setMoveView(Ptr(MooveWidget) moveView)
     this->ui->moveLayout->addWidget(_moveWidget.data());
 }
 
+void MainWindow::setPlayerPanel(Ptr(PlayerPanelWidget) playerPanel)
+{
+    _playerPanel = playerPanel;
+    this->ui->playerPanelLayout->addWidget(_playerPanel.data());
+}
+
+
+
 MainWindow::~MainWindow()
 {
     _viewField->setParent(nullptr);

@@ -1,15 +1,17 @@
 #ifndef HEDGE_H
 #define HEDGE_H
-#include <QRect>
+#include <QRectF>
 
 class Hedge
 {
 private:
-    QRect _recatangle;
+    QRectF _recatangle;
 public:
     Hedge();
-    Hedge(QRect recatangle);
+    Hedge(QRectF recatangle);
     ~Hedge();
+    QRectF recatangle() const;
+    void setRecatangle(const QRectF &recatangle);
 };
 
 #endif // HEDGE_H

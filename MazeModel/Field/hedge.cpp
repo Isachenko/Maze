@@ -1,18 +1,28 @@
 #include "hedge.h"
 
-Hedge::Hedge()
-{
 
+QRectF Hedge::recatangle() const
+{
+    return _recatangle;
 }
 
-Hedge::Hedge(QRect recatangle):
+void Hedge::setRecatangle(const QRectF &recatangle)
+{
+    _recatangle = recatangle;
+}
+Hedge::Hedge()
+{
+    
+}
+
+Hedge::Hedge(QRectF recatangle):
     _recatangle(recatangle)
 {
-
+    
 }
 
 Hedge::~Hedge()
 {
-
+    
 }
 

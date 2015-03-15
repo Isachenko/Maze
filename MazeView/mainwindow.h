@@ -7,6 +7,7 @@
 #include "fieldview.h"
 #include "mazecommon.h"
 #include "moovewidget.h"
+#include "playerpanelwidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,10 +25,12 @@ private:
     Ui::MainWindow *ui;
     Ptr(FieldView) _viewField;
     Ptr(MooveWidget) _moveWidget;
+    Ptr(PlayerPanelWidget) _playerPanel;
 
 public:
     void setFieldView(Ptr(FieldView) fieldView);
     void setMoveView(Ptr(MooveWidget) moveView);
+    void setPlayerPanel(Ptr(PlayerPanelWidget) playerPanel);
 
 public slots:
     void handleOpenAction();

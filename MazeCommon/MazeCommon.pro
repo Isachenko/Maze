@@ -11,10 +11,12 @@ TEMPLATE = lib
 
 DEFINES += MAZECOMMON_LIBRARY
 
-SOURCES += mazecommon.cpp
+SOURCES += mazecommon.cpp \
+    mazemath.cpp
 
 HEADERS += mazecommon.h\
-        mazecommon_global.h
+        mazecommon_global.h \
+    mazemath.h
 
 unix {
     target.path = /usr/lib

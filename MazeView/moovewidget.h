@@ -20,7 +20,15 @@ public:
 
 private:
     Ui::MooveWidget *ui;
-    Ptr(DirectionWidget) directionWidget;
+    Ptr(DirectionWidget) _directionWidget;
+
+signals:
+    void robotDirectionChangedByUser(double direction);
+    void goForwardClicked();
+    void goBackClicked();
+
+public slots:
+    void handleLaserValuesChanged(QVector<qreal> laserValues, qreal maxValue);
 
 };
 

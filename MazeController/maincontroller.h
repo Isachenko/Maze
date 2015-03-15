@@ -22,6 +22,7 @@ private:
     Ptr(FieldController) _fieldController;
     Ptr(FieldView) _viewField;
     Ptr(MooveWidget) _moveWidget;
+    Ptr(PlayerPanelWidget) _playerPanel;
 
 public:
     virtual void initView(const Ptr(MainWindow) &view, const Ptr(FieldView) &viewField);

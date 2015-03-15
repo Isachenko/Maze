@@ -48,12 +48,12 @@ Field FieldFileManager::loadField(const QString &fileName)
             int tly = regExpRectangle.cap(2).toInt();
             int brx = regExpRectangle.cap(3).toInt();
             int bry = regExpRectangle.cap(4).toInt();
-            field.appendHedge(Hedge(QRect(QPoint(tlx, tly), QPoint(brx, bry))));
+            field.appendHedge(Hedge(QRectF(QPointF(tlx, tly), QPointF(brx, bry))));
         } else if(regExpRobot.indexIn(line) != -1) {
             int x = regExpRobot.cap(1).toInt();
             int y = regExpRobot.cap(2).toInt();
             int size = regExpRobot.cap(3).toInt();
-            field.setRobot(QPoint(x,y), Robot(size));
+            field.setRobot(QPointF(x,y), Robot(size));
         }
     }
 
