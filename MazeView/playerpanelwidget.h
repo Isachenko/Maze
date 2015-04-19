@@ -2,12 +2,13 @@
 #define PLAYERPANELWIDGET_H
 
 #include <QtWidgets/QWidget>
+#include "mazeview_global.h"
 
 namespace Ui {
 class PlayerPanelWidget;
 }
 
-class PlayerPanelWidget : public QWidget
+class MAZEVIEWSHARED_EXPORT PlayerPanelWidget : public QWidget
 {
     Q_OBJECT
 

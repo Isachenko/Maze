@@ -4,8 +4,9 @@
 #include <Qt>
 #include <QVector>
 #include <QPointF>
+#include "../mazemodel_global.h"
 
-class Robot
+class MAZEMODELSHARED_EXPORT Robot
 {
 private:
     int _size = 0;

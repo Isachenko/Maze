@@ -8,8 +8,9 @@
 #include "mazecommon.h"
 #include "fieldcontroller.h"
 #include "moovewidget.h"
+#include "mazecontroller_global.h"
 
-class MainController : public QObject
+class MAZECONTROLLERSHARED_EXPORT MainController : public QObject
 {
     Q_OBJECT
 public:

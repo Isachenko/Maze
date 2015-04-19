@@ -8,12 +8,13 @@
 #include "mazecommon.h"
 #include "moovewidget.h"
 #include "playerpanelwidget.h"
+#include "mazeview_global.h"
 
 namespace Ui {
-class MainWindow;
+class  MainWindow;
 }
 
-class MainWindow : public QMainWindow
+class MAZEVIEWSHARED_EXPORT MainWindow : public QMainWindow
 {
     Q_OBJECT
 

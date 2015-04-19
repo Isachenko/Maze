@@ -1,6 +1,6 @@
 #include "robot.h"
-
 #define EPS 2
+#include <QtMath>
 
 int Robot::size() const
 {

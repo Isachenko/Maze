@@ -8,8 +8,9 @@
 #include "Field/field.h"
 #include "fieldview.h"
 #include <QTimer>
+#include "mazecontroller_global.h"
 
-class FieldController : public QObject
+class MAZECONTROLLERSHARED_EXPORT FieldController : public QObject
 {
     Q_OBJECT
 public:

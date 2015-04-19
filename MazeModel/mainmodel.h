@@ -3,9 +3,9 @@
 
 #include "mazecommon.h"
 #include "Field/field.h"
+#include "mazemodel_global.h"
 
-
-class MainModel
+class MAZEMODELSHARED_EXPORT MainModel
 {
 public:
     MainModel();

@@ -2,6 +2,7 @@
 #define MAZEMATH_H
 
 #include <QRectF>
+#include "mazecommon_global.h"
 
 #define LEFT 1
 #define RIGHT 2
@@ -11,7 +12,7 @@
 #define vcode(r, p) ((((p)->x < (r)->x_min) ? LEFT : 0)  + (((p) -> x> (r) -> x_max)? RIGHT: 0) + (((p) -> y <(r) -> y_min)? BOT: 0) + (((p) -> y> (r) -> y_max)? TOP: 0))
 
 
-class MazeMath
+class MAZECOMMONSHARED_EXPORT MazeMath
 {
 public:
     MazeMath();

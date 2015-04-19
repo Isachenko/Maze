@@ -4,9 +4,10 @@
 #include <QtWidgets/QWidget>
 #include <QVector>
 #include <QPointF>
+#include "mazeview_global.h"
 
 namespace Ui {
-class DirectionWidget;
+class MAZEVIEWSHARED_EXPORT DirectionWidget;
 }
 
 class DirectionWidget : public QWidget

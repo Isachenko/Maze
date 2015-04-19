@@ -3,6 +3,7 @@
 
 #include "mazecommon.h"
 #include "directionwidget.h"
+#include "mazeview_global.h"
 
 #include <QtWidgets/QWidget>
 
@@ -10,7 +11,7 @@ namespace Ui {
 class MooveWidget;
 }
 
-class MooveWidget : public QWidget
+class MAZEVIEWSHARED_EXPORT MooveWidget : public QWidget
 {
     Q_OBJECT
 

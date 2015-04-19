@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       -= gui
+QT += widgets
 
 TARGET = MazeController
 TEMPLATE = lib

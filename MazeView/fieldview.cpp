@@ -1,7 +1,7 @@
 #include "fieldview.h"
-#include "ui_fieldview.h"
 #include "qmath.h"
 #include "Field/hedge.h"
+#include <QPainter>
 
 FieldView::FieldView(QWidget *parent) :
     QWidget(parent)

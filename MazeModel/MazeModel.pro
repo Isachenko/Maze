@@ -6,6 +6,7 @@
 
 QT       -= gui
 
+
 TARGET = MazeModel
 TEMPLATE = lib
 

@@ -2,12 +2,13 @@
 #define MAZEWIDGET_H
 
 #include <QWidget>
+#include "mazeview_global.h"
 
 namespace Ui {
 class MazeWidget;
 }
 
-class MazeWidget : public QWidget
+class MAZEVIEWSHARED_EXPORT MazeWidget : public QWidget
 {
     Q_OBJECT
 

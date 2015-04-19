@@ -5,12 +5,13 @@
 #include "mazecommon.h"
 #include <QVector>
 #include "Field/field.h"
+#include "mazeview_global.h"
 
 namespace Ui {
 class FieldView;
 }
 
-class FieldView : public QWidget
+class MAZEVIEWSHARED_EXPORT FieldView : public QWidget
 {
     Q_OBJECT
 

@@ -5,8 +5,9 @@
 
 #include "field.h"
 #include "hedge.h"
+#include "../mazemodel_global.h"
 
-class FieldFileManager
+class MAZEMODELSHARED_EXPORT FieldFileManager
 {
 public:
     FieldFileManager();

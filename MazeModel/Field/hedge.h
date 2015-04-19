@@ -1,8 +1,9 @@
 #ifndef HEDGE_H
 #define HEDGE_H
 #include <QRectF>
+#include "../mazemodel_global.h"
 
-class Hedge
+class MAZEMODELSHARED_EXPORT Hedge
 {
 private:
     QRectF _recatangle;

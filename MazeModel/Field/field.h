@@ -6,8 +6,9 @@
 
 #include "hedge.h"
 #include "Robot/robot.h"
+#include "../mazemodel_global.h"
 
-class Field
+class MAZEMODELSHARED_EXPORT Field
 {
 private:
     QList<Hedge> _hedges;
