@@ -1,0 +1,23 @@
+Rectangle: 10 10, 20 30
+
+Rectangle: 10 40, 30 60
+
+Rectangle: 50 50, 55 200
+
+Rectangle: 60 200, 65 250
+
+Rectangle: 60 200, 65 250
+
+Rectangle: 0 260, 140 270
+
+Rectangle: 150 260, 300 270
+
+Rectangle: 0 0, 1 300
+
+Rectangle: 0 0, 300 1
+
+Rectangle: 299 0, 300 300
+
+Rectangle: 0 299, 300 300
+
+Robot: 150 150, 10
